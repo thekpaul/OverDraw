@@ -5,17 +5,17 @@
 \RequirePackage{pgf}
 \RequirePackage{tikz}
 
-\NewDocumentEnvironment{drawinput}{ o o m +b } { {
-    \begin{tikzpicture}\node[anchor=south west,inner sep=0] (image) at (0,0)
-    \node[anchor=south west, inner sep = 0] (image) at (0,0) {
-        \includegraphics{#3};
-    } \IfNoValueTF{#2} {
+\NewDocumentEnvironment{drawinput}{ o o m +b } {
+    \begin{tikzpicture}
+    \node[anchor=south west,inner sep = 0] (image) at (0,0) {
+        \includegraphics #3
+    };
+    \IfNoValueTF{#2} {
         \IfNoValueTF{#1} {
              \begin{scope}[x={(image.south east)},y={(image.north west)}]
         } { \begin{scope}[x={(image.south east)/#1},y={(image.north west)}] }
     } { \begin{scope}[x={(image.south east)/#1},y={(image.north west)/#2}] }
     } { \end{scope}
     \end{tikzpicture} }
-}
 
 \endinput
