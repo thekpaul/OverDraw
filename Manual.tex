@@ -2,16 +2,38 @@
 \usepackage[margin=1in,top=1.25in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage[T1]{fontenc}
-\usepackage{tgpagella,etoolbox,fancyhdr}
+\usepackage{tgpagella,fancyhdr,minted}
+\usepackage{overdraw} % HAHAHA
 
 \begin{document}
-\begin{titlepage}
+% \begin{titlepage}
     \title{OverDraw : A \LaTeX{} \& TikZ Package}
-    \author{Paul Kim}
+    \author{Paul Kim \\ \textsc{version} 0.1 : \textsc{open} $\beta$-\textsc{test}}
     \date{}
 \maketitle
-\end{titlepage}
-\tableofcontents
-\newpage
+% \end{titlepage}
+% \tableofcontents
+% \newpage
+
+\section{The Basics : A Simple Sample Output}
+The $\beta$-test version of this package only utilises what would have been the
+parameters of \texttt{\\includegraphics} and what would have been TIkZ commands
+for drawing and typing various shapes and strings in a \texttt{tikzpicture}
+environment. The following is a sample example:
+\newline
+
+\begin{minted}{latex}
+\begin{drawinput}{[scale=0.2]{Manual_Subfiles/Sample.jpg}}
+    \draw[blue,ultra thick,rounded corners] (0.12,0.15) rectangle (0.18,0.17);
+\end{drawinput}
+\end{minted}
+
+\begin{drawinput}{[scale=0.2]{Manual_Subfiles/Sample.jpg}}
+    \draw[blue,ultra thick,rounded corners] (0.12,0.15) rectangle (0.18,0.17);
+\end{drawinput}
+
+\textit{Due to limited time, this manual is posted without sufficient guidance
+or explanation as to the abilities and limits of this package. More and thorough
+explanation will be given in version 0.2.}
 
 \end{document}
