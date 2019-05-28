@@ -1,0 +1,35 @@
+\NeedsTeXFormat{LaTeX2e}[2019/05/28]
+\ProvidesPackage{overdraw}[2019/05/28 OverDraw Package]
+
+\RequirePackage{etoolbox}
+\RequirePackage{float}
+\RequirePackage{tikz}
+
+\NewDocumentEnvironment \overdraw { o o m } {%
+    \IfNoValueTF{#1} {
+        \IfNoValueTF{#2} { {
+            \begin{tikzpicture}
+            \node[anchor=south west, inner sep = 0] (image) at (0,0) {
+                \includegraphics{#3}
+            } \begin{scope}[x={(image.south east)},y={(image.north west)}] }
+            { \end{scope}
+            \end{tikzpicture} }
+        } { {
+            \begin{tikzpicture}
+            \node[anchor=south west, inner sep = 0] (image) at (0,0) {
+                \includegraphics{#3}
+            } \begin{scope}[x={(image.south east)/#2},y={(image.north west)}] }
+            { \end{scope}
+            \end{tikzpicture} }
+        }
+    } { {
+        \begin{tikzpicture}
+        \node[anchor=south west, inner sep = 0] (image) at (0,0) {
+            \includegraphics{#3}
+        } \begin{scope}[x={(image.south east)/#1},y={(image.north west)/#2}] }
+        { \end{scope}
+        \end{tikzpicture} }
+    }
+}
+
+\endinput
