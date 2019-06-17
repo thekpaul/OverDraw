@@ -1,0 +1,34 @@
+\section{The Basics : A Simple Sample Output}
+The $\beta$-test version of this package only utilises what would have been the
+parameters of \texttt{\\includegraphics} and what would have been TikZ commands
+for drawing and typing various shapes and strings in a \texttt{tikzpicture}
+environment. The following is a sample example:
+
+\begin{center} \begin{overdraw}{Manual_Subfiles/Sample.jpg}[scale=0.2]
+    \draw[blue,ultra thick,rounded corners] (0.65,0.58) rectangle (0.74,0.88);
+\end{overdraw} \end{center}
+
+This is a basic example of the environment \texttt{overdraw} with a sample image
+from the repository. The most basic form of this environment takes an image as
+a mandatory argument and its optional argument as optional afterwards. Source
+code for this example is given below:
+
+\begin{minted}{latex}
+\begin{overdraw}{Manual_Subfiles/Sample.jpg}[scale=0.2]
+    \draw[blue,ultra thick,rounded corners] (0.65,0.58) rectangle (0.74,0.88);
+\end{overdraw}
+\end{minted}
+
+Grids can be drawn over this example to help end user experience when drawing
+over the images:
+
+\begin{center} \begin{griddraw}{Manual_Subfiles/Sample.jpg}[scale=0.2]
+    \draw[blue,ultra thick,rounded corners] (0.65,0.58) rectangle (0.74,0.88);
+\end{griddraw} \end{center}
+
+This is a basic example of the environment \texttt{griddraw} with the sample
+image from above.
+
+\textit{Due to limited time, this manual is posted without sufficient guidance
+or explanation as to the abilities and limits of this package. More and thorough
+explanation will be given in version 0.2.}

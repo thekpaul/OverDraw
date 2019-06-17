@@ -1,30 +1,76 @@
 \NeedsTeXFormat{LaTeX2e}[2019/05/28]
 \ProvidesPackage{overdraw}[2019/05/28 OverDraw Package]
 
-% \RequirePackage{xparse}
-\RequirePackage{pgf}
+\RequirePackage{xparse}
+\RequirePackage{graphicx}
 \RequirePackage{tikz}
+\usetikzlibrary{calc}
 
-\newenvironment{drawinput}[1] {
-    \begin{tikzpicture}
-    \node[anchor=south west,inner sep = 0] (image) at (0,0) {
-        \includegraphics #1
-    }; \begin{scope}[x={(image.south east)},y={(image.north west)}]
-} {
-    \end{scope} \end{tikzpicture}
-}
-
-% \NewDocumentEnvironment{drawinput}{ o o m +b } {
+% \newenvironment{drawinput}[1] {
 %     \begin{tikzpicture}
 %     \node[anchor=south west,inner sep = 0] (image) at (0,0) {
-%         \includegraphics #3
-%     };
-%     \IfNoValueTF{#2} {
-%         \IfNoValueTF{#1} {
-%              \begin{scope}[x={(image.south east)},y={(image.north west)}]
-%         } { \begin{scope}[x={(image.south east)/#1},y={(image.north west)}] }
-%     } { \begin{scope}[x={(image.south east)/#1},y={(image.north west)/#2}] }
-% } { \end{scope} \end{tikzpicture}
+%         \includegraphics #1
+%     }; \begin{scope}[x={(image.south east)},y={(image.north west)}]
+% } {
+%     \end{scope} \end{tikzpicture}
 % }
+
+\NewDocumentEnvironment{overdraw} { o o m o }%
+{%
+    \begin{tikzpicture}
+    \node[anchor=south west, inner sep = 0] (image) at (0,0) {
+        \includegraphics[#4]{#3}
+    };
+
+    \IfNoValueTF{#2} {%
+        \IfNoValueTF{#1} {%
+            \begin{scope}[x={(image.south east)},y={(image.north west)}]
+        } {%
+            \pgfmathparse{1/(#1)}
+            \begin{scope}[x={($\pgfmathresult * (image.south east)$)},
+                y={(image.north west)}]
+        }
+    } {%
+        \pgfmathparse{1/(#1)}
+        \edef\xratio{\pgfmathresult}
+        \pgfmathparse{1/(#2)}
+        \edef\yratio{\pgfmathresult}
+        \begin{scope}[x={($\xratio * (image.south east)$)},
+            y={($\yratio * (image.north west)$)}]
+    }
+} {
+    \end{scope}
+    \end{tikzpicture}%
+}%
+
+\NewDocumentEnvironment{griddraw} { o o m o }%
+{%
+    \begin{tikzpicture}
+    \node[anchor=south west, inner sep = 0] (image) at (0,0) {
+        \includegraphics[#4]{#3}
+    };
+
+    \IfNoValueTF{#2} {%
+        \IfNoValueTF{#1} {%
+            \begin{scope}[x={(image.south east)},y={(image.north west)}]
+        } {%
+            \pgfmathparse{1/(#1)}
+            \begin{scope}[x={($\pgfmathresult * (image.south east)$)},
+                y={(image.north west)}]
+        }
+    } {%
+        \pgfmathparse{1/(#1)}
+        \edef\xratio{\pgfmathresult}
+        \pgfmathparse{1/(#2)}
+        \edef\yratio{\pgfmathresult}
+        \begin{scope}[x={($\xratio * (image.south east)$)},
+            y={($\yratio * (image.north west)$)}]
+    } \draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+    \foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+    \foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+} {
+    \end{scope}
+    \end{tikzpicture}%
+}%
 
 \endinput
