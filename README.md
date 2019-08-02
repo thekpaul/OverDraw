@@ -1,16 +1,52 @@
-OverDraw ![GitHub release][2] ![Language Info][3]
+OverDraw
 ===
+![GitHub release][2] ![Language Info][3]
 
 OverDraw is a LaTeX2e Package that allows one to superimpose LaTeX on a drawing.
 The GitHub Repository is set to show the latest stable build at master branch.
 At this moment, the latest build is VERSION 0.6, which is stable but limited in
 ability. If a previous release is required, access the [release][1] tab.
-Current developments will be uploaded to the `developing` branch. Contributions
-are always welcome, but Pull Requests directly to the `master` branch will not
-be accepted.
+Current developments will be uploaded to the `developing` branch.
 
 OverDraw is still under development without a clear-cut agenda, so stay tuned!
 
+## Installation
+
+OverDraw is still under development. An official and supported method of
+installation will be provided upon the release of VERSION 1.0.
+
+## Patch Notes
+
+Patch Notes are provided for all releases and pre-releases of OverDraw. New
+Patch Notes are appended to the OverDraw Manual, with the latest Patch Note
+being featured at the top. The latest Patch Note is also embedded in the GitHub
+repository README document.
+
+## Contributing
+
+### Submit an Issue
+1. Check the [issues][4] tab for previous submits of issues related to your own.
+2. If there are no submits that solve your problem, create a new issue.
+3. Issues will be checked and responded to every 48 hours. Stay tuned!
+
+### Pull Request
+1. [Fork from GitHub][5].
+2. Create your feature branch : `git checkout -b newfeature`
+3. Commit changes to your new branch : `git commit -am "Suggest New Feature"`
+4. Push to your fork on GitHub : `git push -u origin newfeature`
+5. [Create a Pull Request][6].
+6. Pull Requests will be checked and responded to every 48 hours. Stay tuned!
+
+## Addendum
+
+OverDraw is distributed under the MIT Licence.
+
+For more information on this and other projects, [visit my website][7].
+
   [1]: https://github.com/thekpaul/OverDraw/releases
-  [2]: https://img.shields.io/github/release-pre/thekpaul/OverDraw.svg?color=turquoise&label=%5D%20%20RELEASE%20%20%5B&style=popout
-  [3]: https://img.shields.io/badge/%5D%20LANGUAGE%20%5B-LaTeX%202e-green.svg
+  [2]: https://img.shields.io/github/release-pre/thekpaul/OverDraw.svg?color=turquoise&label=VERSION&style=popout
+  [3]: https://img.shields.io/badge/LANGUAGE-LaTeX%202e-green.svg
+  [4]: https://github.com/thekpaul/OverDraw/issues
+  [5]: https://github.com/thekpaul/OverDraw/fork
+  [6]: https://github.com/thekpaul/OverDraw/compare
+  [7]: https://thekpaul.github.io
