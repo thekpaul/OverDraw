@@ -2,7 +2,7 @@ OverDraw
 ===
 <p align="center">
   <a><img src="https://img.shields.io/github/release-pre/thekpaul/OverDraw.svg?color=turquoise&label=VERSION&style=popout" alt="Version 0.6"></a>
-  <a><img src="https://img.shields.io/badge/LANGUAGE-LaTeX%202e-green.svg" alt="Language LaTeX"></a>
+  <a><img src="https://img.shields.io/badge/LANGUAGE-LaTeX%202e-pink.svg" alt="Language LaTeX"></a>
   <a><img src="https://img.shields.io/github/license/thekpaul/overdraw?label=Licence" alt="MIT Licence"></a>
 </p><br>
 
