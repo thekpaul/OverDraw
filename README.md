@@ -1,6 +1,10 @@
 OverDraw
 ===
-![GitHub release][2] ![Language Info][3]
+<p align="center">
+  <a><img src="https://img.shields.io/github/release-pre/thekpaul/OverDraw.svg?color=turquoise&label=VERSION&style=popout" alt="Version 0.6"></a>
+  <a><img src="https://img.shields.io/badge/LANGUAGE-LaTeX%202e-green.svg" alt="Language LaTeX"></a>
+  <a><img src="https://img.shields.io/github/license/thekpaul/overdraw?label=Licence" alt="MIT Licence"></a>
+</p><br>
 
 OverDraw is a LaTeX2e Package that allows one to superimpose LaTeX on a drawing.
 The GitHub Repository is set to show the latest stable build at master branch.
@@ -25,28 +29,26 @@ repository README document.
 ## Contributing
 
 ### Submit an Issue
-1. Check the [issues][4] tab for previous submits of issues related to your own.
+1. Check the [issues][2] tab for previous submits of issues related to your own.
 2. If there are no submits that solve your problem, create a new issue.
 3. Issues will be checked and responded to every 48 hours. Stay tuned!
 
 ### Pull Request
-1. [Fork from GitHub][5].
+1. [Fork from GitHub][3].
 2. Create your feature branch : `git checkout -b newfeature`
 3. Commit changes to your new branch : `git commit -am "Suggest New Feature"`
 4. Push to your fork on GitHub : `git push -u origin newfeature`
-5. [Create a Pull Request][6].
+5. [Create a Pull Request][4].
 6. Pull Requests will be checked and responded to every 48 hours. Stay tuned!
 
 ## Addendum
 
 OverDraw is distributed under the MIT Licence.
 
-For more information on this and other projects, [visit my website][7].
+For more information on this and other projects, [visit my website][5].
 
   [1]: https://github.com/thekpaul/OverDraw/releases
-  [2]: https://img.shields.io/github/release-pre/thekpaul/OverDraw.svg?color=turquoise&label=VERSION&style=popout
-  [3]: https://img.shields.io/badge/LANGUAGE-LaTeX%202e-green.svg
-  [4]: https://github.com/thekpaul/OverDraw/issues
-  [5]: https://github.com/thekpaul/OverDraw/fork
-  [6]: https://github.com/thekpaul/OverDraw/compare
-  [7]: https://thekpaul.github.io
+  [2]: https://github.com/thekpaul/OverDraw/issues
+  [3]: https://github.com/thekpaul/OverDraw/fork
+  [4]: https://github.com/thekpaul/OverDraw/compare
+  [5]: https://thekpaul.github.io
